@@ -12,12 +12,20 @@ from datetime import date
 from .ai import TextGenerator, generate_ideas
 from .budget import allocate_budget, budget_warnings, per_guest_cost
 from .checklist import build_vendor_checklist
-from .models import EventInput, Plan
+from .models import EventInput, Ideas, Plan
 from .timeline import build_timeline
 
 
-def create_plan(event: EventInput, generator: TextGenerator | None = None, today: date | None = None) -> Plan:
-    """Build the plan. Local parts are instant; only ideas may call Gemini (once)."""
+def create_plan(
+    event: EventInput,
+    generator: TextGenerator | None = None,
+    today: date | None = None,
+    ideas: Ideas | None = None,
+) -> Plan:
+    """Build the plan. Local parts are instant; only ideas may call Gemini (once).
+
+    Pass `ideas` when they were already produced (e.g. from the UI's cache) to skip the AI call.
+    """
     budget = allocate_budget(event.event_type, event.budget_inr)
     timeline = build_timeline(event.event_type, event.event_date, today)
     warnings = budget_warnings(event.event_type, event.budget_inr, event.guests)
@@ -30,6 +38,6 @@ def create_plan(event: EventInput, generator: TextGenerator | None = None, today
         per_guest_inr=per_guest_cost(event.budget_inr, event.guests),
         timeline=timeline,
         vendors=build_vendor_checklist(budget),
-        ideas=generate_ideas(event, generator),
+        ideas=ideas or generate_ideas(event, generator),
         warnings=warnings,
     )

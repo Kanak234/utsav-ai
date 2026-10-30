@@ -27,4 +27,4 @@ Event planning in India is spread across notebooks, calls and WhatsApp. Chatbots
 Empty/whitespace name; past date; 0 or 20,000 guests; budget below minimum; HTML / prompt-injection text; event in 2 days (all tasks overdue); Gemini timeout/quota/garbage JSON; no API key; non-Latin text in PDF.
 
 ## Acceptance criteria
-All of the above covered by automated tests (`pytest`, 48 tests), lint clean, app deploys on Streamlit Cloud, Store package passes PWABuilder checks.
+All of the above covered by automated tests (`pytest`, 50 tests), lint clean, app deploys on Streamlit Cloud, Store package passes PWABuilder checks.

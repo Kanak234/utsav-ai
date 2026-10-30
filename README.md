@@ -62,7 +62,7 @@ Add your free key from [Google AI Studio](https://aistudio.google.com/apikey) to
 ```bash
 ruff check . && ruff format --check . && pytest
 ```
-48 tests cover validation & injection cleaning, exact budget sums for every event type, timeline compression, vendor checklists, Gemini JSON parsing/fallback (with a fake model — no network), all three exporters, and an end-to-end UI run with Streamlit `AppTest`. CI runs them on every push.
+50 tests cover validation & injection cleaning, exact budget sums for every event type, timeline compression, vendor checklists, Gemini JSON parsing/fallback (with a fake model — no network), all three exporters, and an end-to-end UI run with Streamlit `AppTest`. CI runs them on every push.
 
 ## Project docs
 

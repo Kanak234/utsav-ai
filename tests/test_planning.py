@@ -77,3 +77,12 @@ def test_format_inr_uses_indian_grouping(amount, expected):
     from utsav.budget import format_inr
 
     assert format_inr(amount) == expected
+
+
+def test_create_plan_reuses_given_ideas(wedding, today, fake_generator_cls):
+    from utsav.ai import offline_ideas
+
+    fake = fake_generator_cls(reply="{}")
+    ideas = offline_ideas(wedding)
+    plan = create_plan(wedding, fake, today, ideas=ideas)
+    assert plan.ideas is ideas and fake.prompts == []  # no AI call when ideas are supplied

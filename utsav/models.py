@@ -73,6 +73,7 @@ class Ideas:
     activities: tuple[str, ...]
     money_saving_tips: tuple[str, ...]
     source: str  # "gemini" or "offline" — shown in the UI for transparency
+    note: str = ""  # why AI was unavailable (never contains secrets), shown as a caption
 
 
 @dataclass

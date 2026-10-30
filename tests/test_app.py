@@ -31,3 +31,10 @@ def test_invalid_input_shows_error(monkeypatch):
     at.sidebar.text_input[0].set_value("   ")
     at.sidebar.button[0].click().run()
     assert any("name" in e.value for e in at.sidebar.error)
+
+
+def test_no_key_explains_offline_ideas(monkeypatch):
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    at = AppTest.from_file(APP, default_timeout=30).run()
+    at.sidebar.button[0].click().run()
+    assert any("no Gemini API key" in c.value for c in at.caption)
