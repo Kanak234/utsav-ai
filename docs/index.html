@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Utsav AI — Wedding, Birthday & Community Event Planner</title>
+  <meta name="description" content="Free GenAI planner for weddings, birthdays and community events in India: budget split, dated timeline, vendor checklist and personalised ideas.">
+  <meta name="theme-color" content="#B54708">
+  <meta property="og:title" content="Utsav AI — Event Planner">
+  <meta property="og:description" content="Budget, timeline, vendor checklist and personalised ideas for your celebration.">
+  <meta property="og:image" content="https://kanak234.github.io/utsav-ai/og-image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Only our own app may be framed; blocks injected scripts (security). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src https://*.streamlit.app https://share.streamlit.io; img-src 'self' data:; style-src 'self'; script-src 'self'">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#planner">Skip to planner</a>
+  <div class="shell">
+    <header class="bar">
+      <img src="icons/icon-192.png" alt="Utsav AI diya logo">
+      <h1>Utsav AI</h1>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </header>
+    <p class="status" id="status" role="status" aria-live="polite">Loading the planner… (first open can take ~30 seconds while the server wakes up)</p>
+    <!-- The planner runs on Streamlit Cloud; ?embed=true hides Streamlit's own chrome. -->
+    <iframe id="planner" class="frame" title="Utsav AI event planner"
+            src="https://utsav-ai.streamlit.app/?embed=true&embed_options=light_theme"
+            allow="clipboard-write" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+  <noscript><p class="page">Utsav AI needs JavaScript. <a href="https://utsav-ai.streamlit.app">Open the planner directly</a>.</p></noscript>
+  <script src="app.js"></script>
+</body>
+</html>

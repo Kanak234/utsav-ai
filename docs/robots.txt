@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kanak234.github.io/utsav-ai/sitemap.xml

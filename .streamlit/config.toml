@@ -1,0 +1,15 @@
+# High-contrast saffron theme (WCAG AA contrast on text & buttons).
+[theme]
+primaryColor = "#B54708"
+backgroundColor = "#FFFDF8"
+secondaryBackgroundColor = "#FFF1E0"
+textColor = "#1B1F3B"
+font = "sans serif"
+
+[server]
+headless = true
+enableXsrfProtection = true
+maxUploadSize = 1
+
+[browser]
+gatherUsageStats = false
