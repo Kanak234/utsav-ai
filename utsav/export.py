@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 from .budget import format_inr
 from .models import Plan
 
-APP_URL = "https://utsav-ai.streamlit.app"
+APP_URL = "https://utsav-ai-qcbbvwralbmn2krnpq8rfs.streamlit.app"
 
 
 def _rupees(amount: int) -> str:

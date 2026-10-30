@@ -129,7 +129,7 @@ VENDOR_SPECIFIC_QUESTIONS = MappingProxyType(
 
 # ---- AI (ai.py) --------------------------------------------------------------
 # Model is configurable through Streamlit secrets; these are tried in order.
-DEFAULT_MODELS = ("gemini-flash-latest", "gemini-2.5-flash")
+DEFAULT_MODELS = ("gemini-3.8-flash", "gemini-3.6-flash", "gemini-3.5-flash-lite", "gemini-flash-latest")
 AI_TIMEOUT_MS = 20_000
 AI_MAX_OUTPUT_TOKENS = 900  # ideas are short lists — a small cap keeps calls fast
 AI_TEMPERATURE = 0.8

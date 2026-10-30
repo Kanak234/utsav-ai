@@ -5,7 +5,7 @@ Same project, three places:
 2. **GitHub Pages** (`docs/` folder) → installable PWA shell + privacy/terms pages.
 3. **Microsoft Store** → the PWA shell packaged as MSIX with PWABuilder.
 
-> If your Streamlit URL is not exactly `https://utsav-ai.streamlit.app`, replace it in: `docs/index.html`, `utsav/export.py` (`APP_URL`) and `README.md`.
+> If your Streamlit URL is not exactly `https://utsav-ai-qcbbvwralbmn2krnpq8rfs.streamlit.app`, replace it in: `docs/index.html`, `utsav/export.py` (`APP_URL`) and `README.md`.
 
 ## 1. GitHub repo (one command)
 

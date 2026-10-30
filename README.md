@@ -11,7 +11,7 @@ Budget that adds up · dated timeline · vendor checklist · personalised ideas 
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-[**▶ Live app**](https://utsav-ai.streamlit.app) · [Windows app (Microsoft Store)](STORE_GUIDE.md) · [Privacy](https://kanak234.github.io/utsav-ai/privacy.html)
+[**▶ Live app**](https://utsav-ai-qcbbvwralbmn2krnpq8rfs.streamlit.app) · [Windows app (Microsoft Store)](STORE_GUIDE.md) · [Privacy](https://kanak234.github.io/utsav-ai/privacy.html)
 
 </div>
 
